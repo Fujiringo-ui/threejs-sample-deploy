@@ -1,6 +1,6 @@
-import "./style.css";
+import "../style.css";
 import * as THREE from "three";
-import { GLTFLoader } from "./node_modules/three/examples/jsm/loaders/GLTFLoader.js";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import * as dat from "lil-gui";
 
 // const gui = new dat.GUI();

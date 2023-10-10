@@ -94,7 +94,7 @@ animationScripts.push({
   end: 20,
   function() {
     //線形補間
-    model.scene.position.z = lerp(-7, -1.95, scalePercent(0, 20));
+    model.scene.position.z = lerp(-7, -1.5, scalePercent(0, 20));
     mesh1.position.z = lerp(-7, -1.95, scalePercent(0, 20));
     mesh2.position.z = lerp(-6, -0.95, scalePercent(0, 20));
     mesh3.position.z = lerp(-9, -2.95, scalePercent(0, 20));
@@ -176,7 +176,7 @@ spotLight.position.set(5, 60, 0);
 scene.add(spotLight);
 
 const spotLightHelper = new THREE.SpotLightHelper(spotLight);
-scene.add(spotLightHelper);
+// scene.add(spotLightHelper);
 
 // const light = new THREE.AmbientLight(0x404040, 10);
 // scene.add(light);

@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "futura-pt", sans-serif;
+}
+
+body {
+  color: white;
+  overflow-x: hidden;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+main {
+  position: absolute;
+  width: 100vw;
+  height: 200vh;
+  z-index: 100;
+  /* justify-content: center;
+  text-align: center; */
+  font-size: 4rem;
+  margin-top: 70px;
+}
+
+.title {
+  text-align: center;
+}
+.title h1 {
+  font-weight: 400;
+  text-align: center;
+  font-size: 72px;
+  margin-top: 80px;
+  margin-bottom: 250px;
+}
+.title span {
+  font-weight: 400;
+  text-align: center;
+  font-size: 48px;
+}
+section {
+  min-height: 100vh;
+  padding: 20px;
+  font-size: 3rem;
+}
+
+p {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.section01-inner {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: #000;
+  text-align: center;
+}
+
+.section01-inner h2 {
+  font-weight: 400;
+}
+.section01-inner span {
+  margin-left: 20px;
+  font-size: 24px;
+}
+.section01-contents p {
+  font-size: 18px;
+  margin-top: 50px;
+  line-height: 40px;
+}
+
+.section02-inner {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: #000;
+  text-align: center;
+}
+.section02-inner h2 {
+  font-weight: 400;
+}
+.section02-inner span {
+  margin-left: 20px;
+  font-size: 24px;
+}
+.project-wrapper {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+}
+img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  /* filter: grayscale(100%); */
+}
+.contact-inner {
+  padding-top: 50px;
+  padding-bottom: 200px;
+  background: #000;
+  text-align: center;
+}
+.contact-inner h2 {
+  font-weight: 400;
+}
+.contact-inner span {
+  margin-left: 20px;
+  font-size: 24px;
+}
+.contact-inner p {
+  margin-top: 100px;
+  font-size: 40px;
+}
+/* .contact-inner.warn {
+  font-size: 50px;
+  display: block;
+} */
+
+/**グリッチ*/
+
+a {
+  background: repeating-linear-gradient(
+    0deg,
+    #333 0,
+    #333 1px,
+    transparent 2px,
+    transparent 4px,
+    #333 5px
+  );
+}
+a::before {
+  filter: sepia(100%) hue-rotate(300deg) opacity(0.8);
+  mix-blend-mode: hard-light;
+}
+a::after {
+  filter: sepia(100%) hue-rotate(60deg) opacity(0.8);
+  mix-blend-mode: hard-light;
+}
+@keyframes main_transform {
+  0% {
+    transform: scaleX(1) scaleY(1.1) skewX(60deg);
+  }
+  1% {
+    transform: scaleX(1.02) scaleY(1);
+  }
+  2% {
+    transform: scaleX(1);
+  }
+  20% {
+    transform: skewX(0);
+  }
+  21% {
+    transform: skewX(60deg);
+  }
+  22% {
+    transform: skewX(-10deg);
+  }
+  24% {
+    transform: skewX(0);
+  }
+  30% {
+    transform: skewX(0);
+  }
+  31% {
+    transform: skewX(120deg);
+  }
+  32% {
+    transform: skewX(-10deg);
+  }
+  40% {
+    transform: scaleX(0.95) scaleY(1);
+  }
+  41% {
+    transform: scaleX(1.02) scaleY(0.9);
+  }
+  42% {
+    transform: scaleX(1) scaleY(1);
+  }
+  44% {
+    transform: scaleY(1);
+  }
+  45% {
+    transform: scaleY(1.2);
+  }
+  46% {
+    transform: scaleX(1) scaleY(1);
+  }
+  47% {
+    transform: scaleX(1.02);
+  }
+  48% {
+    transform: scaleX(1) rotateX(6deg);
+  }
+  50% {
+    transform: skewX(0deg);
+  }
+  80% {
+    transform: scaleX(1) rotateX(0);
+  }
+  85% {
+    transform: scaleY(1) rotateX(-20deg);
+  }
+  86% {
+    transform: scaleY(0);
+  }
+  87% {
+    transform: scaleY(1);
+  }
+  90% {
+    transform: scaleX(1.1) rotateX(0) skewX(-100deg);
+  }
+  91% {
+    transform: scaleX(1) skewX(60deg);
+  }
+  92% {
+    transform: scaleX(1) skewX(-160deg);
+  }
+  93% {
+    transform: scaleX(1) skewX(100deg);
+  }
+  94% {
+    transform: scaleX(1) skewX(-80deg);
+  }
+  94% {
+    transform: skewX(0);
+  }
+  100% {
+    transform: scaleX(1.01) skewX(0);
+  }
+}
+@keyframes main_filter_max {
+  0% {
+    filter: saturate(1) contrast(1);
+  }
+  20% {
+    filter: saturate(15) contrast(1.2);
+  }
+  22% {
+    filter: saturate(0.5) contrast(1);
+  }
+  25% {
+    filter: saturate(10) contrast(0.8);
+  }
+  30% {
+    filter: saturate(5) contrast(1);
+  }
+  40% {
+    filter: saturate(0.5) contrast(1.1);
+  }
+  50% {
+    filter: saturate(5) contrast(5);
+  }
+  51% {
+    filter: saturate(2) contrast(1);
+  }
+  60% {
+    filter: saturate(10) contrast(3);
+  }
+  61% {
+    filter: saturate(3) contrast(0.5);
+  }
+  70% {
+    filter: saturate(1) contrast(2);
+  }
+  75% {
+    filter: saturate(10) contrast(1);
+  }
+  80% {
+    filter: saturate(2) contrast(2);
+  }
+  85% {
+    filter: saturate(200) contrast(1);
+  }
+  90% {
+    filter: saturate(10) contrast(1);
+  }
+  100% {
+    filter: saturate(10) contrast(3);
+  }
+}
+@keyframes main-bg {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 0px 25px;
+  }
+}
+a:hover {
+  animation-name: main_filter_max, main_transform, main-bg;
+  animation-duration: 10s, 4s, 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out, linear, linear;
+  animation-direction: normal, alternate, normal;
+}
+a img {
+  opacity: 0.5;
+}
+@keyframes opacityChange {
+  0% {
+    opacity: 0.3;
+  }
+  33% {
+    opacity: 0.6;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+@keyframes zindexChange {
+  0% {
+    z-index: 1;
+  }
+  100% {
+    z-index: -8;
+  }
+}
+@keyframes translateBefore-max {
+  0% {
+    top: 4px;
+    left: -5px;
+  }
+  100% {
+    top: -4px;
+    left: 5px;
+  }
+}
+a:hover::before {
+  animation-name: translateBefore-max, opacityChange, zindexChange;
+  animation-duration: 0.61s, 3.1s, 4.7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear, ease-in-out, steps(10);
+  display: inline-block;
+}
+@keyframes translateAfter-max {
+  0% {
+    top: -4px;
+    left: -5px;
+  }
+  100% {
+    top: 4px;
+    left: 5px;
+  }
+}
+a:hover::after {
+  animation-name: translateAfter-max, opacityChange, zindexChange;
+  animation-duration: 0.79s, 2.8s, 3.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear, ease-in-out, steps(10);
+  display: inline-block;
+}
